@@ -12,7 +12,7 @@ image_id   = "41eafa05-c264-4840-8c17-746e6a388c2d"
 
 # VM Flavor: https://nerc-project.github.io/nerc-docs/openstack/create-and-connect-to-the-VM/flavors/
 # Availability depends upon your Quota i.e. vCPU / RAM / Disk, etc.
-vm_flavor = "m1.medium"
+vm_flavor = "cpu-a.2"
 
 ##  SSH Keypair control
 keypair-name = "your-key-pair-name"
