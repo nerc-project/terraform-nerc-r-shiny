@@ -4,14 +4,15 @@
 sudo su
 
 # Update the System
-yum -y install update
+#yum -y install update
 
 # Install R
 yum install epel-release -y
 yum -y install R
 
 # Install the Shiny R and other dependencies packages
-su - -c "R -e \"install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC'), repos='http://cran.rstudio.com/')\""
+#su - -c "R -e \"install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC'), repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages(c('shiny'), repos='http://cran.rstudio.com/')\""
 
 # Install Shiny Server
 yum install wget -y
