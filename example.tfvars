@@ -19,7 +19,8 @@ keypair-name = "your-private-key-pair"
 keypair-path = "./your-private-key-pair.pub"
 
 # User Data file path
-user-data-path = "./install-R-Shiny.sh"
+# user-data-path = "./install-R-Shiny-Ubuntu.sh"
+user-data-path = "./install-R-Shiny-Centos.sh"
 
 #  Network options
 

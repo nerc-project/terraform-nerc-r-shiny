@@ -9,16 +9,20 @@ sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /
 
 # Update the System
 yum update -y
+yum config-manager --set-enabled powertools
+
+# Fix Issues Related to Centos EOL
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
 
 # Install R
-yum config-manager --set-enabled powertools
 yum install epel-release epel-next-release -y
 
 yum install R -y
 
 # Install the Shiny R and other dependencies packages
-su - -c "R -e \"install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC'), repos='http://cran.rstudio.com/')\""
-# su - -c "R -e \"install.packages(c('shiny'), repos='http://cran.rstudio.com/')\""
+# su - -c "R -e \"install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC'), repos='http://cran.rstudio.com/')\""
+su - -c "R -e \"install.packages(c('shiny', 'rmarkdown'), repos='http://cran.rstudio.com/')\""
 
 # Install Shiny Server
 yum install wget -y
