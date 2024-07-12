@@ -7,16 +7,16 @@
 # number of VM's to start
 quantity = "1"
 
-image_name = "centos-7-x86_64"
-image_id   = "41eafa05-c264-4840-8c17-746e6a388c2d"
+image_name = "centos-8-x86_64"
+image_id   = "14475f0f-3663-4ce7-a2dd-3cc206105bdf"
 
 # VM Flavor: https://nerc-project.github.io/nerc-docs/openstack/create-and-connect-to-the-VM/flavors/
 # Availability depends upon your Quota i.e. vCPU / RAM / Disk, etc.
-vm_flavor = "mem-su.4"
+vm_flavor = "cpu-su.2"
 
 ##  SSH Keypair control
-keypair-name = "your-key-pair-name"
-keypair-path = "./your-key-pair-name.pub"
+keypair-name = "your-private-key-pair"
+keypair-path = "./your-private-key-pair.pub"
 
 # User Data file path
 user-data-path = "./install-R-Shiny.sh"
