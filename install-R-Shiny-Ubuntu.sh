@@ -22,7 +22,7 @@ apt install gdebi-core -y
 # Install Shiny Server
 wget https://download3.rstudio.org/ubuntu-18.04/x86_64/shiny-server-1.5.22.1017-amd64.deb
 
-gdebi shiny-server-1.5.22.1017-amd64.deb
+gdebi --non-interactive shiny-server-1.5.22.1017-amd64.deb
 
 # Start Shiny Server
 # systemctl start shiny-server
